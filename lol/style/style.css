@@ -1,0 +1,109 @@
+body {
+	background-color: rgb(0, 0, 0);
+}
+
+.head {
+	display: flex;
+	justify-content: center;
+}
+
+.main-sec {
+	margin-top: 5%;
+}
+
+.main-picture {
+	height: 65vh;
+	border: 10px solid rgb(139, 139, 139);
+}
+
+.title-block {
+	text-align: center;
+	background-color: rgb(139, 139, 139);
+	width: 78%;
+}
+
+.title {
+	font-size: 4em;
+	color: rgb(255, 255, 255);
+}
+
+.img-block {
+	display: flex;
+	justify-content: space-around;
+}
+
+.description-image {
+	font-size: 1.7em;
+	color: rgb(255, 255, 255);
+}
+
+.img-desc {
+	background-color: rgb(139, 139, 139);
+	padding: 5%;
+}
+
+.all-table {
+	text-align: center;
+}
+
+.title-table {
+	margin-top: 20%;
+	color: rgb(255, 255, 255);
+	font-size: 1.5em;
+}
+
+.table-fishing {
+	background-color: rgb(139, 139, 139);
+	color: rgb(255, 255, 255);
+	font-size: 1.5em;
+	width: 100%;
+}
+
+.inputs-block {
+	margin-top: 10%;
+}
+
+.survey-title {
+	text-align: center;
+	font-size: 2em;
+	color: rgb(255, 255, 255);
+}
+
+.nice-form {
+	display: flex;
+	color: rgb(255, 255, 255);
+	width: 40%;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	font-size: 1.4em;
+	background-color: rgb(175, 158, 158);
+	border-radius: 0px 30px 30px 0px;
+}
+
+#shuka-selec {
+	/* background-color: rgb(175, 158, 158); */
+	width: 40%;
+	font-size: 1em;
+	border-radius: 50px;
+}
+
+.you-desc,
+.check-form,
+.form-btn {
+	margin-top: 5%;
+}
+
+.form-btn {
+	margin-left: 70%;
+	/* background-color: rgb(175, 158, 158); */
+	border: 0px;
+	border-radius: 50px;
+	width: 20%;
+	height: 5vh;
+}
+
+.form-btn:hover {
+	/* background-color: rgb(153, 136, 136); */
+	font-weight: 900;
+}
