@@ -1,0 +1,167 @@
+body {
+	background-color: rgb(0, 0, 0);
+}
+
+.head {
+	display: flex;
+	/* justify-content: center; */
+}
+
+.main-sec {
+	margin-top: 5%;
+}
+
+.main-sec__img {
+	height: 65vh;
+	border: 10px solid rgb(139, 139, 139);
+	margin-left: 10%;
+}
+
+.head__title-block {
+	text-align: center;
+	background-color: rgb(139, 139, 139);
+	width: 53%;
+}
+
+.head__title {
+	font-size: 4em;
+	color: rgb(255, 255, 255);
+}
+
+.main-sec__img-block {
+	display: flex;
+	justify-content: space-around;
+}
+
+.main-sec__description-image {
+	font-size: 1.7em;
+	color: rgb(255, 255, 255);
+}
+
+.main-sec__img-desc {
+	position: absolute;
+	right: 5%;
+	height: 75%;
+	top: 1%;
+	background-color: rgb(139, 139, 139);
+	padding: 5%;
+}
+
+.main-sec__all-table {
+	text-align: center;
+	position: absolute;
+	top: 25%;
+	left: 1%;
+}
+
+.main-sec__title-table {
+	color: rgb(255, 255, 255);
+	font-size: 1.5em;
+}
+
+.main-sec__table-fishing {
+	background-color: rgb(139, 139, 139);
+	color: rgb(255, 255, 255);
+	font-size: 1.5em;
+	width: 100%;
+}
+
+.main-sec__inputs-block {
+	margin-top: 10%;
+}
+
+.main-sec__nice-form {
+	position: absolute;
+	top: 50%;
+	display: flex;
+	color: rgb(255, 255, 255);
+	width: 25%;
+	height: 47%;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	font-size: 1.4em;
+	background-color: rgb(175, 158, 158);
+	border-radius: 0px 30px 30px 0px;
+}
+
+.main-sec__shuka-selec {
+	width: 40%;
+	font-size: 1em;
+	border-radius: 50px;
+}
+
+.main-sec__you-desc,
+.main-sec__check-form,
+.main-sec__form-btn {
+	margin-top: 5%;
+}
+
+.main-sec__form-btn {
+	margin-left: 70%;
+	border: 0px;
+	border-radius: 50px;
+	width: 20%;
+	height: 5vh;
+}
+
+.main-sec__form-btn:hover {
+	font-weight: 900;
+}
+
+.main-sec__checkbox-block,
+.main-sec__radio-form {
+	margin-top: 5%;
+}
+
+/* чета блин чета */
+@media only screen and (max-width: 1279px) {
+	.main-sec__img-desc {
+		left: 0%;
+		top: 0%;
+		position: fixed;
+		width: 100%;
+		height: 45%;
+		padding: 0%;
+		z-index: 1;
+	}
+
+	.head {
+		position: absolute;
+		top: 47%;
+		left: 0%;
+		font-size: 0.8em;
+		width: 100%;
+	}
+
+	.head__title-block {
+		width: 100%;
+	}
+
+	.main-sec {
+		/* display: none; */
+	}
+
+	.main-sec__nice-form {
+		position: absolute;
+		left: 0%;
+		top: 75%;
+		height: 80%;
+	}
+
+	.main-sec__about-u {
+		width: 80%;
+	}
+
+	.main-sec__img {
+		position: absolute;
+		top: 75%;
+		left: 20%;
+	}
+
+	.main-sec__all-table {
+		position: absolute;
+		top: 75%;
+		width: 40%;
+	}
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Site for the first three iterations of the internship">
+    <meta name="author" content="Petrov Nikita">
+    <link rel="icon" href="../img/icon.jpg" type="image/x-icon">
+    <title>Internship</title>
+    <link rel="stylesheet" href="../style/style.css"> 
+</head>
+<body>
+    <header class="head">
+        <div class="head__title-block">
+            <h1 class="head__title">РЫБОЛОВСТВО</h1>
+        </div>
+    </header>
+
+    <main class="main-sec">
+        <section class="main-sec__img-block">
+            <img class="main-sec__img" src="../img/main_pic.jpg" alt="no img">
+            <div class="main-sec__options-block">
+                <div class="main-sec__img-desc">
+                    <p class="main-sec__description-image">
+                        - Я не ходил в школу, я был на рыбалке <br>
+                        - Бро какой наш план? <br>
+                        - Выловить русалку!<br>
+                        - Блин, помолчи...<br> 
+                        - Много делал три поклёвки<br>
+                        - Я держу её за жабры, она меня за рыболова...
+                    </p>
+                </div>
+
+                <div class="main-sec__all-table">
+                    <h3 class="main-sec__title-table">Таблица щуков</h3>
+    
+                    <table class="main-sec__table-fishing">
+                        <tr style="background-color: black;">
+                            <td>Имя</td>
+                            <td>Количество щуков</td>
+                        </tr>
+    
+                        <tr style="background-color: black;">
+                            <td>Миша</td>
+                            <td>13</td>
+                        </tr>
+    
+                        <tr style="background-color: black;">
+                            <td>Саша</td>
+                            <td>1</td>
+                        </tr>
+    
+                        <tr style="background-color: black;">
+                            <td>Вася</td>
+                            <td>1488</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-sec__inputs-block">
+            <form class="main-sec__nice-form" action="./yea.html">
+                <h2 class="main-sec__title-form">Рыбная форма</h2>
+
+                <label for="shuka-selec">Выберите любимую рыбу</label>
+
+                <select name="shuka-selec" id="shuka-selec" class="main-sec__shuka-selec">
+                    <option value="Shuka" selected>Щука</option>
+                    <option value="Karas">Карась</option>
+                    <option value="Shegol">Щегол</option>
+                </select>
+
+                <label class="main-sec__you-desc" for="about-u">РАССКАЖИ О СЕБЕ</label>
+                <textarea name="about-u" id="about-u" cols="60" rows="5" class="main-sec__about-u"></textarea>
+
+                <div class="main-sec__checkbox-block">
+                    <label class="main-sec__check-form" for="check-bro">СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ</label>
+                    <input id="check-bro" type="checkbox" class="main-sec__check-bro">
+                </div>
+
+                <div class="main-sec__radio-form">
+                    <label for="main-sec__radio-inp">я тута</label>
+                    <input id="main-sec__radio-inp" type="radio">
+                </div>
+
+                <div class="main-sec__range-form">
+                    <label for="main-sec__range-inp">красивое</label>
+                    <input id="main-sec__range-inp" type="range">
+                </div>
+
+                <button class="main-sec__form-btn" type="submit">ЛЕТС</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
