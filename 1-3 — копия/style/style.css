@@ -1,0 +1,17 @@
+body {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.head {
+	grid-column-start: 2;
+}
+
+.main-sec {
+	grid-column-start: 1;
+	display: grid;
+}
+
+.head__title-block {
+	background-color: #039380;
+}
