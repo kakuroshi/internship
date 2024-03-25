@@ -32,48 +32,70 @@
 			</section>
 
 			<section class="main-sec__left-block">
-				<!-- <div class="main-sec__img" style="background-color: antiquewhite">
-					<p>
-						idsfbuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuubusdfbdsfbsbasdfbb <br />
-						dfgsfsdgdfgdfggfdfgd <br />
-						sdfsdfsdfsd <br />
-						sdfsdgfsgfgdgggs
-					</p>
-				</div> -->
-
 				<div class="main-sec__left-block__mini-blocks">
 					<div class="main-sec__all-table">
-						<h3 class="main-sec__title-table">Таблица щуков</h3>
+						<h3 style="text-align: center" class="main-sec__title-table">
+							Таблица щуков
+						</h3>
 
 						<table class="main-sec__table-fishing">
-							<tr>
-								<td>Имя</td>
-								<td>Количество щуков</td>
+							<tr class="main-sec__table-fishing tr">
+								<th>Имя</th>
+								<th colspan="3">Количество рыбов</th>
 							</tr>
 
-							<tr>
-								<td>Миша</td>
-								<td>13</td>
+							<tr class="main-sec__table-fishing tr">
+								<td rowspan="3" scope="rowgroup">Миша</td>
+								<th colspan="2">карасёв</th>
+								<th>щуков</th>
+
+								<tr class="main-sec__table-fishing tr-in">
+									<td style="border: 1px solid rgb(148, 148, 179);">Живые</td>
+									<td style="border: 1px solid rgb(148, 148, 179);">Не живые</td>
+									<td rowspan="2" style="border: 1px solid rgb(148, 148, 179);">12</td>
+								</tr>
 							</tr>
 
-							<tr>
-								<td>Саша</td>
-								<td>1</td>
+							
+
+							<tr class="main-sec__table-fishing tr">
+								<td>14</td>
+								<td>3</td>
 							</tr>
 
-							<tr>
-								<td>Вася</td>
-								<td>1488</td>
+							<tr class="main-sec__table-fishing tr">
+								<td rowspan="2">Саша</td>
+								<th colspan="2">пираньев</th>
+								<th>щуков</th>
+							</tr>
+
+							<tr class="main-sec__table-fishing tr">
+								<td colspan="2">1</td>
+								<td>3</td>
+							</tr>
+
+							<tr class="main-sec__table-fishing tr">
+								<td rowspan="2">Вася</td>
+								<th colspan="2">карасёв</th>
+								<th>щуков</th>
+							</tr>
+
+							<tr class="main-sec__table-fishing tr">
+								<td colspan="2">11</td>
+								<td>44</td>
 							</tr>
 						</table>
 					</div>
 
 					<form class="main-sec__nice-form" action="./yea.html">
-						<h2 class="main-sec__title-form">Рыбная форма</h2>
+						<h2 style="text-align: center" class="main-sec__title-form">
+							Рыбная форма
+						</h2>
 
 						<label for="shuka-selec">Выберите любимую рыбу</label>
 
 						<select
+							style="margin-bottom: 1vh"
 							name="shuka-selec"
 							id="shuka-selec"
 							class="main-sec__shuka-selec">
@@ -90,9 +112,10 @@
 							id="about-u"
 							cols="10"
 							rows="2"
-							class="main-sec__about-u"></textarea>
+							class="main-sec__about-u">
+						</textarea>
 
-						<div class="main-sec__checkbox-block">
+						<div style="margin-top: 1vh" class="main-sec__checkbox-block">
 							<label class="main-sec__check-form" for="check-bro">ПУНЬК</label>
 							<input
 								id="check-bro"
@@ -100,14 +123,19 @@
 								class="main-sec__check-bro" />
 						</div>
 
-						<div class="main-sec__radio-form">
+						<div style="margin-top: 1vh" class="main-sec__radio-form">
 							<label for="main-sec__radio-inp">я тута</label>
 							<input id="main-sec__radio-inp" type="radio" />
 						</div>
 
-						<div class="main-sec__range-form">
+						<div
+							style="margin-top: 1vh; color: blue"
+							class="main-sec__range-form">
 							<label for="main-sec__range-inp">красивое</label>
-							<input id="main-sec__range-inp" type="range" />
+							<input
+								style="width: 100%"
+								id="main-sec__range-inp"
+								type="range" />
 						</div>
 
 						<button class="main-sec__form-btn" type="submit">ЛЕТС</button>
@@ -125,7 +153,6 @@
 					src="../img/main_pic.jpg"
 					alt="no img"
 					style="
-						height: 65vh;
 						border: 20px solid rgba(235, 248, 255, 0.5);
 						box-shadow: 5px 0px 10px 5px rgba(0, 0, 0, 0.3);
 					" />

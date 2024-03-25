@@ -1,4 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@font-face {
+	font-family: "Montserrat", sans-serif;
+	src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+
 body {
+	font-family: "Montserrat", sans-serif;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 40px;
@@ -12,6 +22,7 @@ body {
 	background-color: rgba(235, 248, 255, 0.5);
 	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 	text-align: center;
+	font-size: 3em;
 }
 
 .main-sec {
@@ -24,6 +35,7 @@ body {
 .main-sec__txt-block {
 	background-color: rgba(235, 248, 255, 0.5);
 	box-shadow: 5px 0px 10px 5px rgba(0, 0, 0, 0.3);
+	font-size: 2em;
 }
 
 .main-sec__left-block {
@@ -32,8 +44,22 @@ body {
 	column-gap: 40px;
 }
 
+.main-sec__table-fishing {
+	border: 2px solid rgb(101, 101, 128);
+	text-align: center;
+	font-size: 0.95em;
+
+	.tr {
+		> td,
+		th {
+			border: 1px solid rgb(148, 148, 179);
+		}
+	}
+}
+
 .main-sec__img {
 	grid-column-start: 2;
+	max-height: 80vh;
 }
 
 .main-sec__left-block__mini-blocks {
@@ -41,16 +67,16 @@ body {
 	display: grid;
 	row-gap: 40px;
 	justify-content: center;
-}
+	font-size: 0.9em;
 
-.main-sec__all-table,
-.main-sec__nice-form,
-.main-sec__thx {
-	grid-column-start: 1;
-	grid-auto-rows: 40px;
-	width: 100px;
-	background-color: rgba(235, 248, 255, 0.5);
-	box-shadow: 5px 0px 10px 5px rgba(0, 0, 0, 0.3);
+	> div,
+	form {
+		grid-column-start: 1;
+		grid-auto-rows: 40px;
+		width: 220px;
+		background-color: rgba(235, 248, 255, 0.5);
+		box-shadow: 5px 0px 10px 5px rgba(0, 0, 0, 0.3);
+	}
 }
 
 .head:hover {
@@ -80,13 +106,16 @@ body {
 	}
 
 	.main-sec__txt-block {
-		margin-top: 10%;
+		margin-top: 20%;
+		font-size: 1.5em;
 	}
 
 	.head {
 		position: fixed;
 		width: 100%;
 		background-color: rgba(235, 248, 255, 1);
+		z-index: 1;
+		font-size: 2em;
 	}
 
 	.main-sec__left-block {
@@ -94,25 +123,15 @@ body {
 		row-gap: 40px;
 	}
 
-	.main-sec__all-table {
-		grid-column-start: 1;
-	}
-
-	.main-sec__nice-form {
-		grid-column-start: 2;
-	}
-
-	.main-sec__thx {
-		grid-column-start: 3;
+	.main-sec__left-block__mini-blocks {
+		display: flex;
+		justify-content: space-around;
 	}
 
 	.main-sec__img {
 		grid-column-start: 1;
 		grid-row-start: 2;
 		transform: scale(0.8);
-	}
-
-	.main-sec__left-block__mini-blocks {
-		justify-content: space-around;
+		margin: 0 auto;
 	}
 }
