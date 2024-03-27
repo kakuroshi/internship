@@ -10,19 +10,24 @@
 body {
 	font-family: "Montserrat", sans-serif;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 2fr 1fr;
 	column-gap: 40px;
 	justify-content: stretch;
 	transition: all 1s ease;
 }
 
 .head {
-	grid-column-start: 2;
-	grid-row-start: 1;
+	position: fixed;
+	right: 0.5%;
+	width: 33%;
+	overflow: hidden;
+	height: 100%;
+	/* grid-column-start: 2;
+	grid-row-start: 1; */
 	background-color: rgba(235, 248, 255, 0.5);
 	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 	text-align: center;
-	font-size: 3em;
+	font-size: 2em;
 }
 
 .main-sec {
@@ -35,7 +40,7 @@ body {
 .main-sec__txt-block {
 	background-color: rgba(235, 248, 255, 0.5);
 	box-shadow: 5px 0px 10px 5px rgba(0, 0, 0, 0.3);
-	font-size: 2em;
+	font-size: 1.3em;
 }
 
 .main-sec__left-block {
@@ -47,7 +52,7 @@ body {
 .main-sec__table-fishing {
 	border: 2px solid rgb(101, 101, 128);
 	text-align: center;
-	font-size: 0.95em;
+	font-size: 1em;
 
 	.tr {
 		> td,
@@ -60,6 +65,7 @@ body {
 .main-sec__img {
 	grid-column-start: 2;
 	max-height: 80vh;
+	margin: auto;
 }
 
 .main-sec__left-block__mini-blocks {
@@ -73,7 +79,7 @@ body {
 	form {
 		grid-column-start: 1;
 		grid-auto-rows: 40px;
-		width: 220px;
+		width: 250px;
 		background-color: rgba(235, 248, 255, 0.5);
 		box-shadow: 5px 0px 10px 5px rgba(0, 0, 0, 0.3);
 	}
@@ -113,6 +119,7 @@ body {
 	.head {
 		position: fixed;
 		width: 100%;
+		height: auto;
 		background-color: rgba(235, 248, 255, 1);
 		z-index: 1;
 		font-size: 2em;
@@ -132,6 +139,6 @@ body {
 		grid-column-start: 1;
 		grid-row-start: 2;
 		transform: scale(0.8);
-		margin: 0 auto;
+		max-height: auto;
 	}
 }
