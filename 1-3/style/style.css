@@ -14,23 +14,24 @@ body {
 	column-gap: 40px;
 	justify-content: stretch;
 	transition: all 1s ease;
+	grid-template-areas: "main header";
 }
 
 .head {
 	position: fixed;
-	right: 0.5%;
+	grid-area: header;
 	width: 33%;
 	overflow: hidden;
 	height: 100%;
-	/* grid-column-start: 2;
-	grid-row-start: 1; */
 	background-color: rgba(235, 248, 255, 0.5);
 	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 	text-align: center;
 	font-size: 2em;
+	justify-self: end;
 }
 
 .main-sec {
+	grid-area: main;
 	grid-column-start: 1;
 	grid-row-start: 1;
 	display: grid;
@@ -65,6 +66,7 @@ body {
 .main-sec__img {
 	grid-column-start: 2;
 	max-height: 80vh;
+	max-width: 90%;
 	margin: auto;
 }
 
@@ -112,17 +114,19 @@ body {
 	}
 
 	.main-sec__txt-block {
-		margin-top: 20%;
+		margin-top: 5%;
 		font-size: 1.5em;
 	}
 
 	.head {
-		position: fixed;
+		margin: 0;
+		padding: 0;
+		position: sticky;
 		width: 100%;
 		height: auto;
 		background-color: rgba(235, 248, 255, 1);
 		z-index: 1;
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 
 	.main-sec__left-block {

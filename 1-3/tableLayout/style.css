@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@font-face {
+	font-family: "Montserrat", sans-serif;
+	src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+
+body {
+	font-family: "Montserrat", "sans-serif";
+}
+
+#tbl {
+	.tr {
+		> td,
+		th {
+			border: 1px solid black;
+		}
+	}
+}
