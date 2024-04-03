@@ -29,8 +29,7 @@ body {
 	text-align: center;
 	font-size: 2em;
 	transition: 3s;
-	animation: moveRight 2s 1;
-	animation-fill-mode: forwards;
+	animation: moveRight 2s forwards;
 }
 
 @keyframes moveRight {
@@ -51,8 +50,7 @@ body {
 	background-color: rgba(235, 248, 255, 0.5);
 	box-shadow: 5px 0px 10px 5px rgba(0, 0, 0, 0.3);
 	font-size: 1.3em;
-	animation: moveTop 2s 1;
-	animation-fill-mode: forwards;
+	animation: moveTop 2s forwards;
 }
 
 @keyframes moveTop {
@@ -65,8 +63,7 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 40px;
-	animation: moveBottom 2s 1;
-	animation-fill-mode: forwards;
+	animation: moveBottom 2s forwards;
 }
 
 @keyframes moveBottom {
