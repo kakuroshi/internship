@@ -15,6 +15,8 @@ body {
 	justify-content: stretch;
 	transition: all 1s ease;
 	grid-template-areas: "main header";
+	overflow-x: hidden;
+	user-select: none;
 }
 
 .head {
@@ -26,6 +28,15 @@ body {
 	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 	text-align: center;
 	font-size: 2em;
+	transition: 3s;
+	animation: moveRight 2s 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes moveRight {
+	0% {
+		transform: translatex(100%);
+	}
 }
 
 .main-sec {
@@ -40,12 +51,28 @@ body {
 	background-color: rgba(235, 248, 255, 0.5);
 	box-shadow: 5px 0px 10px 5px rgba(0, 0, 0, 0.3);
 	font-size: 1.3em;
+	animation: moveTop 2s 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes moveTop {
+	0% {
+		transform: translateY(-100%);
+	}
 }
 
 .main-sec__left-block {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 40px;
+	animation: moveBottom 2s 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes moveBottom {
+	0% {
+		transform: translateY(100%);
+	}
 }
 
 .main-sec__table-fishing {
