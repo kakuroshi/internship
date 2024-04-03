@@ -133,6 +133,24 @@ body {
 }
 
 @media only screen and (max-width: 1279px) {
+	@keyframes moveRight {
+		0% {
+			transform: translateY(-100%);
+		}
+	}
+
+	@keyframes moveTop {
+		0% {
+			transform: translateX(-100%);
+		}
+	}
+
+	@keyframes moveBottom {
+		0% {
+			transform: translateY(100%);
+		}
+	}
+
 	body {
 		margin: 0%;
 		display: block;
