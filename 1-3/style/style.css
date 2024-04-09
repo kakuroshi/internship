@@ -20,7 +20,6 @@ body {
 }
 
 .head {
-	position: fixed;
 	grid-area: header;
 	overflow: hidden;
 	height: 100%;
@@ -30,6 +29,11 @@ body {
 	font-size: 2em;
 	transition: 3s;
 	animation: moveRight 2s forwards;
+}
+
+.head__title-block {
+	position: fixed;
+	width: 100%;
 }
 
 @keyframes moveRight {
