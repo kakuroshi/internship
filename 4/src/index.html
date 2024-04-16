@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JS</title>
+		<script src="./script.js" defer></script>
+	</head>
+	<body>
+		<header class="header" style="text-align: center">
+			<h1>I4</h1>
+		</header>
+
+		<main class="main">
+			<section style="text-align: center" class="main__math">
+				<h2>Математические действия</h2>
+
+				<input type="number" class="main__math-inp--first" id="fInp" />
+
+				<span
+					class="main__math-btns"
+					style="
+						margin-left: 2vh;
+						margin-right: 2vh;
+						width: 2vh;
+						text-align: center;
+					">
+					<button class="main__plus">+</button>
+					<button class="main__minus">-</button>
+					<button class="main__multiplication">x</button>
+					<button class="main__division">/</button>
+				</span>
+
+				<input type="number" class="main__math-inp--second" id="sInp" />
+				<span style="margin-left: 2vh">=</span>
+				<span class="main__math-res" style="margin-left: 2vh">result</span>
+			</section>
+
+			<section class="main__text">
+				<label for="inpTxt">Введите любое значение</label>
+				<input type="text" name="inpTxt" id="textInp" />
+				<hr>
+
+				<p class="main__templating" id="conc">Конкетация</p>
+				<hr>
+
+				<p class="main__shielding" id="shield">Экранирование</p>
+				<hr>
+
+				<p class="main__concatenation" id="templ">Шаблонизация</p>
+			</section>
+		</main>
+	</body>
+</html>
