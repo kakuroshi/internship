@@ -39,16 +39,87 @@
 			<section class="main__text">
 				<label for="inpTxt">Введите любое значение</label>
 				<input type="text" name="inpTxt" id="textInp" />
-				<hr>
+				<hr />
 
 				<p class="main__templating" id="conc">Конкетация</p>
-				<hr>
+				<hr />
 
 				<p class="main__shielding" id="shield">Экранирование</p>
-				<hr>
+				<hr />
 
 				<p class="main__concatenation" id="templ">Шаблонизация</p>
 			</section>
+
+			<button class="main__cycle" id="btnCyc"><span>лог цикл</span></button>
+
+			<section class="main__second-ex" style="margin-top: 5%">
+				<p id="jokeP">Чёрный</p>
+
+				<div
+					id="joke"
+					style="width: 5vw; height: 20vh; background-color: black"></div>
+
+				<input
+					type="text"
+					placeholder="Наведи фокус"
+					id="focusInp"
+					style="margin-top: 1%" />
+
+					<p onclick="getName()" id="clickName" style="
+					user-select: none;
+					font-size: 1.5em;
+					">Нажми</p>
+			</section>
+
+			<script>
+				// Действуем с прямоугольником
+				const colorDiv = document.getElementById("joke");
+				const jokeP = document.getElementById("jokeP");
+
+				colorDiv.addEventListener("mouseenter", () => {
+					colorDiv.style.backgroundColor = "blue";
+					jokeP.textContent = "Синий";
+				});
+				colorDiv.addEventListener("mouseleave", () => {
+					colorDiv.style.backgroundColor = "black";
+					jokeP.textContent = "Чёрный";
+				});
+				colorDiv.addEventListener("click", () => {
+					colorDiv.style.backgroundColor = "red";
+					jokeP.textContent = "Красный";
+				});
+
+				// Инпут
+				const focInp = document.getElementById("focusInp");
+				focInp.style.fontSize = "1em";
+
+				focInp.addEventListener("focus", () => {
+					console.log("Фокус");
+					focInp.style.fontSize = "1.3em";
+				});
+
+				focInp.addEventListener("blur", () => {
+					console.log("Фокус ушел");
+					focInp.style.fontSize = "1em";
+				});
+
+				// Ого
+				const getName = () => {
+					const nameChanger = document.getElementById('clickName')
+
+					const names = ["Александр", "Иван", "Михаил", "Артем", "Дмитрий"];
+					let rand = Math.floor(Math.random() * 5)
+
+					for (let i = 0; i < names.length; i++) {
+						if (names[rand] == nameChanger.textContent) {
+							console.log(rand);
+							rand = Math.floor(Math.random() * 5)
+						}
+					}
+
+					nameChanger.textContent = names[rand]
+				};
+			</script>
 		</main>
 	</body>
 </html>

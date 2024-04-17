@@ -8,26 +8,38 @@ function calculation (digit) {
     const mathSInp = Number(document.getElementById("sInp").value)
     const mathRes = document.querySelector(".main__math-res")
 
-    switch (digit) {
-        case "+":
-            mathRes.textContent = (mathFInp + mathSInp)
-            break
-        case "-":
-            mathRes.textContent = (mathFInp - mathSInp)
-            break
-        case "x":
-            let finX = String((mathFInp * mathSInp).toFixed(2))
-            helpMath(finX)
-            break
-        case "/":
-            let finD = String((mathFInp / mathSInp).toFixed(2))
-            helpMath(finD)
-            break
-        default:
-            mathRes.textContent = 'Error!'
+    try {
+        switch (digit) {
+            case "+":
+                console.log('Результат вычислений: ' + mathFInp + mathSInp);
+                mathRes.textContent = (mathFInp + mathSInp)
+                break
+            case "-":
+                console.log('Результат вычислений: ' + mathFInp - mathSInp);
+                mathRes.textContent = (mathFInp - mathSInp)
+                break
+            case "x":
+                let finX = String((mathFInp * mathSInp).toFixed(2))
+                helpMath(finX)
+                break
+            case "/":
+                if (mathSInp == 0) {
+                    throw new Error('Деление на ноль невозможно')
+                } else {
+                    let finD = String((mathFInp / mathSInp).toFixed(2))
+                    helpMath(finD)
+                }
+                break
+            default:
+                mathRes.textContent = 'Error!'
+        }
+    } catch (error) {
+        console.error(error.message);
+        mathRes.textContent = error.message
     }
 
     function helpMath(res) {
+        console.log('Результат вычислений: ' + res);
         if (res[res.indexOf('.')+1] == '0') {
             mathRes.textContent = res.slice(0, res.indexOf('.'))
         } else {
@@ -61,5 +73,39 @@ textInp.addEventListener('input', () => {
         shield.textContent = `Вы написали: "${textInp.value}", верно?`
     } else {
         shield.textContent = 'Экранирование'
+    }
+})
+
+//Пример цикл
+document.getElementById('btnCyc').addEventListener('click', () => {
+    const guys = [
+        'Анна',
+        'Иван',
+        'Елена',
+        'Петр',
+        'Мария',
+        'Александр',
+        'София',
+        'Михаил',
+        'Алексей',
+        'Ольга',
+        'Дмитрий',
+        'Екатерина',
+        'Артем',
+        'Наталья',
+        'Сергей'
+      ]
+
+    for (let i = 0; i <= guys.length; i++) {
+        
+        if (i < guys.length) {
+            setTimeout(() => {
+                console.log(guys[i]);
+            }, i * 1000);
+        } else if (i = guys.length) {
+            setTimeout(() => {
+                console.log('Это всё!!!');
+            }, guys.length * 1000)
+        }
     }
 })
