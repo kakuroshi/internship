@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(202, 255, 255);
+}
+
+button{
+    background-color: rgb(80, 185, 247);
+    border: 0;
+}
+
+button:hover{
+    background-color: rgb(61, 168, 230);
+}
+
+button:active{
+    background-color: rgb(57, 157, 214);
+}
+
+.main__math button{
+    width: 2vw;
+    height: 3vh;
+}
+
+#btnCyc{
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 10vw;
+    height: 5vh;
+    margin-left: 45%;
+}
+
+#fInp, #sInp{
+    width: 15vw;
+    height: 3vh;
+    font-size: 0.8em;
+}
+
+#fInp:focus, #sInp:focus{
+    outline: none;
+}
+
+#conc, #shield, #templ, #inpTxtLb{
+    font-size: 1.5em;
+}
+
+.main__second-ex{
+    text-align: center;
+}
+
+#joke{
+    margin-left: 47.5%;
+}

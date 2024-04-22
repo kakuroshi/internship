@@ -4,15 +4,18 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>JS</title>
+		<link rel="stylesheet" href="../style/style.css">
 		<script src="./script.js" defer></script>
 	</head>
 	<body>
-		<header class="header" style="text-align: center">
+		<header class="header" style="text-align: center;
+		font-size: 2em;">
 			<h1>I4</h1>
 		</header>
 
 		<main class="main">
-			<section style="text-align: center" class="main__math">
+			<section style="text-align: center;
+			font-size: 1.7em;" class="main__math">
 				<h2>Математические действия</h2>
 
 				<input type="number" class="main__math-inp--first" id="fInp" />
@@ -36,28 +39,35 @@
 				<span class="main__math-res" style="margin-left: 2vh">result</span>
 			</section>
 
+			<hr>
+
 			<section class="main__text">
-				<label for="inpTxt">Введите любое значение</label>
+				<h2 style="text-align: center;
+				font-size: 2.2em;">Строки</h2>
+
+				<label for="inpTxt" id="inpTxtLb">Введите любое значение:</label>
 				<input type="text" name="inpTxt" id="textInp" />
-				<hr />
 
 				<p class="main__templating" id="conc">Конкетация</p>
-				<hr />
 
 				<p class="main__shielding" id="shield">Экранирование</p>
-				<hr />
 
 				<p class="main__concatenation" id="templ">Шаблонизация</p>
 			</section>
 
-			<button class="main__cycle" id="btnCyc"><span>лог цикл</span></button>
+			<hr>
 
-			<section class="main__second-ex" style="margin-top: 5%">
+			<button class="main__cycle" id="btnCyc"><span>лог цикл</span></button>
+			
+			<hr>
+
+			<section class="main__second-ex" style="font-size: 1.5em;">
 				<p id="jokeP">Чёрный</p>
 
 				<div
 					id="joke"
-					style="width: 5vw; height: 20vh; background-color: black"></div>
+					style="width: 5vw; height: 10vh; background-color: black">
+				</div>
 
 				<input
 					type="text"
@@ -69,6 +79,8 @@
 					user-select: none;
 					font-size: 1.5em;
 					">Нажми</p>
+
+					<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="main__link">вот тута ссылочка</a>
 			</section>
 
 			<script>
@@ -103,7 +115,7 @@
 					focInp.style.fontSize = "1em";
 				});
 
-				// Ого
+				// Подключим к p "Нажми"
 				const getName = () => {
 					const nameChanger = document.getElementById('clickName')
 
@@ -119,6 +131,11 @@
 
 					nameChanger.textContent = names[rand]
 				};
+
+				document.querySelector('.main__link').addEventListener("click", (e) => {
+					e.preventDefault();
+					document.querySelector('.main__link').textContent = "не переходим(("
+				})
 			</script>
 		</main>
 	</body>

@@ -40,7 +40,7 @@ function calculation (digit) {
 
     function helpMath(res) {
         console.log('Результат вычислений: ' + res);
-        if (res[res.indexOf('.')+1] == '0') {
+        if (res[res.indexOf('.')+3] == undefined && res[res.indexOf('.')+2] == '0') {
             mathRes.textContent = res.slice(0, res.indexOf('.'))
         } else {
             mathRes.textContent = res
@@ -64,7 +64,7 @@ textInp.addEventListener('input', () => {
 
 //2
 const templ = document.getElementById('templ')
-templ.textContent = '\'Я могу использовать кавычки только благодаря слэшу\''
+templ.textContent = '\'Я могу использовать кавычки только благодаря слэшу\', это не увидим - "\n :(", а \\n - да'
 
 //3
 const shield = document.getElementById('shield')
