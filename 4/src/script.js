@@ -19,15 +19,13 @@ function calculation (digit) {
                 mathRes.textContent = (mathFInp - mathSInp)
                 break
             case "x":
-                let finX = String((mathFInp * mathSInp).toFixed(2))
-                helpMath(finX)
+                helpMath(String((mathFInp * mathSInp).toFixed(2)))
                 break
             case "/":
-                if (mathSInp == 0) {
+                if (mathSInp === 0) {
                     throw new Error('Деление на ноль невозможно')
                 } else {
-                    let finD = String((mathFInp / mathSInp).toFixed(2))
-                    helpMath(finD)
+                    helpMath(String((mathFInp / mathSInp).toFixed(2)))
                 }
                 break
             default:
@@ -40,8 +38,10 @@ function calculation (digit) {
 
     function helpMath(res) {
         console.log('Результат вычислений: ' + res);
-        if (res[res.indexOf('.')+3] == undefined && res[res.indexOf('.')+2] == '0') {
-            mathRes.textContent = res.slice(0, res.indexOf('.'))
+
+        let dotIndex = res.indexOf('.')
+        if ((dotIndex != '-1') && (res.slice(dotIndex+1, dotIndex+3) === '00')) {  //строгое равенство сравнивает значения без преобразования их типов
+            mathRes.textContent = res.slice(0, dotIndex)
         } else {
             mathRes.textContent = res
         }
@@ -55,7 +55,7 @@ const textInp = document.getElementById('textInp')
 const conc = document.getElementById('conc')
 
 textInp.addEventListener('input', () => {
-    if (textInp.value != '') {
+    if (textInp.value) {
         conc.textContent = `Вы написали: "` + textInp.value + `", верно?`
     } else {
         conc.textContent = 'Конкетация'
@@ -72,7 +72,7 @@ textInp.addEventListener('input', () => {
     if (textInp.value != '') {
         shield.textContent = `Вы написали: "${textInp.value}", верно?`
     } else {
-        shield.textContent = 'Экранирование'
+        shield.textContent = 'Шаблонизация'
     }
 })
 
@@ -102,10 +102,77 @@ document.getElementById('btnCyc').addEventListener('click', () => {
             setTimeout(() => {
                 console.log(guys[i]);
             }, i * 1000);
-        } else if (i = guys.length) {
+        } else if (i === guys.length) {
             setTimeout(() => {
                 console.log('Это всё!!!');
             }, guys.length * 1000)
         }
     }
 })
+
+function checkDif () {
+    var checkVar = 'я var'
+    let checkLet = 'я let'
+    const checkConst = 'я const'
+
+    console.log(checkVar);
+    console.log(checkLet);
+    console.log(checkConst);
+    console.log('------------------');
+
+    //const переопределить нельзя, что можно выполнять с другими переменными
+    checkVar = 'var'
+    checkLet = 'let'
+    // checkConst = 'const'
+
+    console.log(checkVar);
+    console.log(checkLet);
+    console.log('------------------');
+
+    //может быть переобъявлена
+    // var checkVar = 'я v'
+    // console.log(checkVar);
+    // console.log('------------------');
+
+    if (checkVar != checkConst) {
+        var v = 'v'
+        // let l = 'l'
+        // const c = 'c'
+    }
+    console.log(v);
+    // Мы не сможем использовать переменные l и c, т.к. они имеют блочную видимость, а переменная v - функциональную
+    // console.log(l);
+    // console.log(c);
+
+}
+checkDif()
+
+function checkOperands () {
+    let a = null
+    let b = 1
+    let c = 10
+
+    console.log(b && c); // Если все true - вернет последний, иначе первый false
+    console.log(c || b); // ИЛИ вернет первое со значением true
+    console.log((a ?? b) ?? c); // Возвращает не ложеподобное
+    console.log('----------');
+
+    a ??= b           // a = a ?? b
+    console.log(a);
+
+    a &&= c
+    console.log(a);
+
+    b ??= a
+    console.log(b);
+
+    !b ? console.log('не увидим(') : console.log('! - отрицание(инверсия), значит 1(true) превращается в false');
+
+    let zero = 0
+    zero ? console.log('не увидим(') : console.log("false, 0, null, undefined, NaN и пустая строка - являются false");
+
+    a = null;
+    ((a ??= b) === c) > ((a && c) > c - b) ? null : console.log(((a ??= b) === c) > ((a && c) > c - b)); // 1 > 1
+}
+console.log('-----Операторы-----');
+checkOperands()
