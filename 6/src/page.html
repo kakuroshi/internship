@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<button class="forward">Вперед</button>
+		<button class="back">Назад</button>
+		<h1>NEW PAGE</h1>
+		<button class="al">alert</button>
+
+		<script>
+			document
+				.querySelector(".forward")
+				.addEventListener("click", () => history.forward());
+			document
+				.querySelector(".back")
+				.addEventListener("click", () => history.back());
+			document
+				.querySelector(".al")
+				.addEventListener("click", () => alert("WOW!!!!!!!!!"));
+		</script>
+	</body>
+</html>

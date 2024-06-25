@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(193, 224, 255);
+}
+
+input{
+    background-color: rgb(228, 240, 250);
+    border: 0;
+    outline: none;
+    width: 10vw;
+    height: 3vh;
+}
+
+button{
+    width: 10vw;
+    height: 4vh;
+    font-size: 1.3em;
+    background-color: beige;
+    border: 0;
+}
+
+hr{
+    border: none;
+    color: black;
+    background-color: black;
+    height: 1px;
+}

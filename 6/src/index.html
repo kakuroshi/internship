@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../style/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__text" style="text-align: center">6 iteration</h1>
+		</header>
+		<hr />
+
+		<section
+			class="storages"
+			style="display: grid; grid-template-columns: 1fr 1fr">
+			<div class="storages__local" style="text-align: center">
+				<h2>local storage</h2>
+				<div class="storages__local-add" style="
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+				">
+					<input class="storages__local-inp" type="text" />
+					<button class="storages__local-but">+</button>
+					<button class="storages__local-del">очистить</button>
+				</div>
+
+				<div class="storages__local-txt">
+					<h3>Задачи:</h3>
+				</div>
+			</div>
+
+			<div class="storages__session" style="
+				border-left: 1px solid black;
+				text-align: center
+			">
+				<h2>session storage</h2>
+				<div class="storages__session-add" style="
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+				">
+					<input class="storages__session-inp" type="text" />
+					<button class="storages__session-but">+</button>
+					<button class="storages__session-del">очистить</button>
+				</div>
+
+				<div class="storages__session-txt">
+					<h3>Задачи:</h3>
+				</div>
+			</div>
+		</section>
+		<hr />
+
+		<section class="BOM">
+			<h2 style="text-align: center">BOM</h2>
+			<div style="
+				display: flex;
+				justify-content: space-around;
+				margin-top: 1%
+			">
+				<button class="BOM__forward">Вперед</button>
+				<button class="BOM__back">Назад</button>
+			</div>
+
+			<div style="
+				display: flex;
+				justify-content: center;
+				margin-top: 1%
+			">
+				<button class="BOM__navigator">get navigator</button>
+			</div>
+
+			<div style="
+				display: flex;
+				justify-content: space-around;
+				margin-top: 1%
+			">
+				<button class="BOM__page" style="margin-top: 1%">to new page</button>
+				<button class="BOM__history" style="margin-left: 1%">history log</button>
+			</div>
+
+			<div style="
+				display: flex;
+				justify-content: center;
+				margin-top: 1%
+			">
+				<button class="BOM__clear-history">добавить историю</button>
+			</div>
+		</section>
+		<hr />
+
+		<section class="cookies">
+			<div class="cookies__add">
+				<h3>Добавить печеньку</h3>
+				<input type="text" class="cookies__add-inp" />
+				<button class="cookies__add-but" style="margin-left: 3%;">+</button>
+			</div>
+
+			<div class="cookies__del" style="margin-top: 3%">
+				<h3>Удалить печеньку</h3>
+				<input type="text" class="cookies__del-inp" />
+				<button class="cookies__del-but" style="margin-left: 3%;">delete</button>
+			</div>
+
+			<button class="cookies__see" style="margin-top: 3%">лог печеньки</button>
+		</section>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
