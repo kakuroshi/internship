@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../style/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header style="text-align: center">
+			<h1>6 iteration</h1>
+		</header>
+
+		<hr />
+
+		<section
+			style="display: grid; grid-template-columns: 1fr 1fr; text-align: center">
+			<div>
+				<h2>local storage</h2>
+				<div>
+					<input type="text" id="lsInp" />
+					<button id="lsAdd">добавить</button>
+					<button id="lsClear">очистить</button>
+				</div>
+				<h3>задачи:</h3>
+				<div id="lsHelp"></div>
+			</div>
+
+			<div style="border-left: 1px solid black">
+				<h2>session storage</h2>
+				<div>
+					<input id="ssInp" type="text" />
+					<button id="ssAdd">добавить</button>
+					<button id="ssClear">очистить</button>
+				</div>
+
+				<h3>задачи:</h3>
+				<div id="ssHelp"></div>
+			</div>
+		</section>
+
+		<hr />
+
+		<section>
+			<h2 style="text-align: center">BOM</h2>
+
+			<div>
+				<div style="display: flex; justify-content: space-around">
+					<button id="backHistory">назад</button>
+					<button id="forwardHistory">вперед</button>
+				</div>
+
+				<div style="margin-top: 2%; display: flex; justify-content: center">
+					<button id="logNav">log navigator</button>
+				</div>
+
+				<div
+					style="margin-top: 2%; display: flex; justify-content: space-around">
+					<button id="seeHist" style="height: 6vh">посмотреть историю</button>
+					<button id="chngHist">изменить историю</button>
+				</div>
+
+				<div style="margin-top: 2%; display: flex; justify-content: center">
+					<button id="toPage">на страничку</button>
+				</div>
+			</div>
+		</section>
+
+		<hr />
+
+		<section>
+			<h1 style="text-align: center">cookies</h1>
+			<div
+				style="
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr;
+					align-items: center;
+					justify-items: center;
+				">
+				<div>
+					<h3>создать печеньку</h3>
+					<input type="text" id="cookieInp" />
+					<button id="cookieAdd">добавить</button>
+				</div>
+
+				<div style="margin-top: 3%">
+					<h3>удалить печеньку</h3>
+					<input type="text" id="cookieDel" />
+					<button id="cookieDelBtn">удалить</button>
+				</div>
+
+				<button style="margin-top: 3%" id="cookieLog">лог печеньки</button>
+			</div>
+		</section>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
