@@ -36,7 +36,8 @@ lsClear.addEventListener("click", () => {
 });
 
 //Session
-//Данные удалятся, если закрыть браузер
+//Данные в Session Storage доступны только в течение текущей сессии страницы.
+//Когда пользователь закрывает вкладку или браузер, все данные из Session Storage удаляются.
 const ssInp = document.getElementById("ssInp");
 const ssAdd = document.getElementById("ssAdd");
 const ssClear = document.getElementById("ssClear");
@@ -129,3 +130,27 @@ cookieDelBtn.addEventListener("click", () => {
 document
 	.getElementById("cookieLog")
 	.addEventListener("click", () => console.log(document.cookie));
+
+document.getElementById("cookieParam").addEventListener("click", () => {
+	//max-age - сколько живет живет cookie в секундах
+	//Существует параметр domain, он задает домен, к которому cookie будет доступен. По умолчанию это текущий домен.
+	//secure - указывает, что cookie будет передаваться только через защищенное соединение (HTTPS).
+
+	//samesite - управляет тем, как cookie отправляется с кросс-сайтовыми запросами.
+	//Strict - cookie отправляется только в том случае, если запрос исходит с того же сайта, что и cookie.
+	//Lax - cookie отправляется с кросс-сайтовыми запросами, но только для безопасных методов (например, GET).
+	//None - cookie отправляется с кросс-сайтовыми запросами без ограничений.
+	document.cookie = `cookieParam=newCookie; max-age=10; path=/; secure; samesite=Strict`;
+	console.log(window.location);
+});
+
+//Оператор debugger позволяет приостановить выполнение кода в определенном месте.
+//Когда интерпретатор JavaScript встречает оператор debugger, выполнение приостанавливается, если открыты инструменты разработчика.
+function testDebug() {
+	alert("откройте консоль");
+	console.log("вот это начало");
+	debugger;
+	console.log("конец");
+}
+
+document.getElementById("deb").addEventListener("click", () => testDebug());
