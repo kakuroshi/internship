@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Document</title> 
+</head>
+<body>
+    <header>
+        <h1>7 iteration</h1>
+    </header>
+    <hr>
+
+    <section id="rep">
+        <h2>Repositories:</h2>
+
+        <div id="reposFirst">
+            <h3>fetch first 5:</h3>
+            <div style="
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                justify-items: center;
+            " id="reposF"></div>
+        </div>
+
+        <div style="margin-top: 3%;" id="reposSecond">
+            <h3>feth rest:</h3>
+            <div style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                row-gap: 5%;
+                justify-items: center;
+            " id="reposA"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
