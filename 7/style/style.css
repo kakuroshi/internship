@@ -1,4 +1,4 @@
-h1, h2, h3, h4, a {
+h1, h2, h3, h4, p, div {
     color: white;
     text-align: center;
 }
@@ -8,7 +8,6 @@ body{
 
 button{
     cursor: pointer;
-    width: 80%;
     background-color: rgb(58, 55, 55);
 }
 
@@ -18,6 +17,16 @@ button:hover{
 
 button:active{
     background-color: rgb(34, 31, 31);
+}
+
+input::placeholder{
+    color: white;
+}
+
+#usPic{
+    width: 30%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 a{

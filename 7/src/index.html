@@ -1,40 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <title>Document</title> 
-</head>
-<body>
-    <header>
-        <h1>7 iteration</h1>
-    </header>
-    <hr>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../style/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<h1>7 iteration</h1>
+		</header>
+		<hr />
 
-    <section id="rep">
-        <h2>Repositories:</h2>
+		<section id="findMan">
+			<div
+				style="
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					justify-items: center;
+				"
+				id="search">
+				<input
+					id="findInp"
+					type="text"
+					placeholder="enter nickname"
+					style="
+						width: 90%;
+						height: 4vh;
+						outline: none;
+						background-color: rgb(94, 93, 93);
+						color: white;
+					" />
+				<button id="findBtn" style="color: white; width: 30%">Search</button>
+			</div>
 
-        <div id="reposFirst">
-            <h3>fetch first 5:</h3>
-            <div style="
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                justify-items: center;
-            " id="reposF"></div>
-        </div>
+			<hr style="display: none" id="hr" />
+			<div
+				style="
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					justify-items: center;
+					display: none;
+				"
+				id="manInfo">
+				<img src="" alt="no img" id="usPic" />
 
-        <div style="margin-top: 3%;" id="reposSecond">
-            <h3>feth rest:</h3>
-            <div style="
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                row-gap: 5%;
-                justify-items: center;
-            " id="reposA"></div>
-        </div>
-    </section>
+				<div>
+					<a href="" id="nickRef">
+						<h3 id="nick" style="font-size: 2em"></h3>
+					</a>
+					<p id="followers" style="font-size: 1.5em"></p>
+				</div>
+			</div>
+		</section>
 
-    <script src="script.js"></script>
-</body>
+		<section id="rep" style="display: none">
+			<hr />
+			<h2>Repositories:</h2>
+
+			<div id="reposFirst">
+				<h3>fetch first 5:</h3>
+				<div
+					style="
+						display: grid;
+						grid-template-columns: repeat(5, 1fr);
+						justify-items: center;
+					"
+					id="reposF"></div>
+			</div>
+
+			<div style="margin-top: 3%" id="reposSecond">
+				<h3>feth rest:</h3>
+				<div
+					style="
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						row-gap: 5%;
+						justify-items: center;
+					"
+					id="reposA"></div>
+			</div>
+		</section>
+
+		<script src="script.js"></script>
+	</body>
 </html>
