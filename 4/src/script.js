@@ -40,7 +40,7 @@ function calculation (digit) {
         console.log('Результат вычислений: ' + res);
 
         let dotIndex = res.indexOf('.')
-        if ((dotIndex != '-1') && (res.slice(dotIndex+1, dotIndex+3) === '00')) {  //строгое равенство сравнивает значения без преобразования их типов
+        if (res % 1 === 0) {
             mathRes.textContent = res.slice(0, dotIndex)
         } else {
             mathRes.textContent = res
@@ -151,10 +151,12 @@ function checkOperands () {
     let a = null
     let b = 1
     let c = 10
+    const d = 0
 
     console.log(b && c); // Если все true - вернет последний, иначе первый false
     console.log(c || b); // ИЛИ вернет первое со значением true
-    console.log((a ?? b) ?? c); // Возвращает не ложеподобное
+    console.log((a ?? b) ?? c); //  Используется для проверки, равна ли переменная null или undefined
+    console.log(d ?? b); // 0 считается false, b - true, выводом будет 0, т.к. 0 не null/undefined
     console.log('----------');
 
     a ??= b           // a = a ?? b
@@ -173,6 +175,13 @@ function checkOperands () {
 
     a = null;
     ((a ??= b) === c) > ((a && c) > c - b) ? null : console.log(((a ??= b) === c) > ((a && c) > c - b)); // 1 > 1
+
+    console.log('-----Строгие равенство и неравенство-----');
+    console.log(b == '1');  // Преобразование в число и в итоге - true
+    console.log(b === '1'); // Преобразования нет, итог - false
+
+    console.log(b != '1');  // Преобразование в число и в итоге - false
+    console.log(b !== '1'); // Преобразования нет, итог - true
 }
 console.log('-----Операторы-----');
 checkOperands()
