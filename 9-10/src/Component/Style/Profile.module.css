@@ -1,0 +1,21 @@
+.profile {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	/* display: none; */
+    color: white;
+}
+
+.nick {
+	font-size: 2em;
+}
+
+.followers {
+	font-size: 1.5em;
+}
+
+.user_pic{
+    width: 30%;
+    height: 100%;
+    border-radius: 50%;
+}
