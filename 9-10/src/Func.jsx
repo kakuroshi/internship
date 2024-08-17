@@ -1,7 +1,7 @@
 import React from "react";
-import Search from './Component/Search.jsx'
-import Profile from './Component/Profile.jsx'
-import Repos from './Component/Repos/Repos.jsx'
+import Search from './Functional/Search.jsx'
+import Profile from './Functional/Profile.jsx'
+import Repos from './Functional/Repos/Repos.jsx'
 
 const Comp = (props) => {
 	return (
