@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Sear from "./Class/Sear.jsx";
 import Prof from "./Class/Prof.jsx";
 import Reposit from "./Class/Repo/Reposit.jsx";
+import Clock from "./Class/Clock.jsx";
 
 class Cl extends Component {
 
@@ -10,6 +11,8 @@ class Cl extends Component {
 
 		return (
 			<section className="all">
+				<hr />
+				<Clock />
 				<hr />
 				<Sear />
 				<hr style={nick ? { display: "block" } : { display: "none" }} />

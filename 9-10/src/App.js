@@ -46,7 +46,7 @@ function App(props) {
 				</div>
 			</div>
 
-			<div className="links" style={window.location.pathname === "/" || homeP === 1 ? {display: "grid"} : {display: "none"}}>
+			<div className="links" style={window.location.pathname === "/" || window.location.pathname === "/Class" || window.location.pathname === "/Functional" ? {display: "grid"} : {display: "none"}}>
 				<NavLink to="/Functional" style={({isActive}) => ({color: isActive ? "rgb(121, 169, 167)" : "white"})} onClick={() => changeNick(null)}>
 					Функциональный подход
 				</NavLink>
