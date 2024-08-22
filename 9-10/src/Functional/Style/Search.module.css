@@ -1,0 +1,18 @@
+.search {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+}
+
+.search_inp {
+	width: 90%;
+	height: 4vh;
+	outline: none;
+	background-color: rgb(94, 93, 93);
+	color: white;
+}
+
+.search_btn {
+	color: white;
+	width: 30%;
+}
