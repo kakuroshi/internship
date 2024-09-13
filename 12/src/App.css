@@ -59,7 +59,7 @@ a {
   font-size: 2em;
   display: flex;
   flex-direction: column;
-  gap: 15vh;
+  gap: 10vh;
 }
 
 .menu-img {
