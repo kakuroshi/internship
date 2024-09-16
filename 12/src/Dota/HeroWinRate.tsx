@@ -1,36 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './Style/HeroWinRate.module.css';
-
-interface Hero {
-  id: number;
-  localized_name: string;
-  pro_win: number;
-  pro_pick: number;
-}
+import {useSelector, useDispatch} from "react-redux";
+import {RootState, AppDispatch} from "../store";
+import { fetchHeroes } from '../thunk/winRateSlice';
 
 const HeroWinRate = () => {
-  const [heroes, setHeroes] = useState<Hero[]>([]);
-  const [error, setError] = useState<string>('');
+  const {items, loading, error} = useSelector((state: RootState) => state.heroes);
+	const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    const fetchHeroWinRates = async () => {
-      try {
-        const response = await fetch('https://api.opendota.com/api/heroStats');
-        if (!response.ok) {
-          throw new Error('Ошибка сети');
-        }
-        const data: Hero[] = await response.json();
-        setHeroes(data);
-      } catch (err) {
-        setError('Ошибка загрузки данных');
-      }
-    };
+    dispatch(fetchHeroes())
+  }, [dispatch]);
 
-    fetchHeroWinRates();
-  }, []);
-
-  if (error) return <p>{error}</p>;
+  if (loading) return <p>Loading...</p>;
+	if (error) return <p>Error: {error}</p>;
 
   return (
     <div className={style.container}>
@@ -44,7 +28,7 @@ const HeroWinRate = () => {
           </tr>
         </thead>
         <tbody>
-          {heroes.map(hero => (
+          {items.map(hero => (
             <tr key={hero.id}>
               <td>
                 <NavLink to={`/Dota/hero/${hero.id}`} className={style.link}>

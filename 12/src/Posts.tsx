@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import {RootState, AppDispatch} from "./store";
-import {fetchPosts} from "./reducers/postsSlice";
+import {fetchPosts} from "./thunk/postsSlice";
 
 const Posts: React.FC = () => {
 	const {items, loading, error} = useSelector((state: RootState) => state.posts);
@@ -14,10 +14,10 @@ const Posts: React.FC = () => {
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>Error: {error}</p>;
 
-    const blogStyle: {fontSize: string; color: string} = {
-        fontSize: "2em",
-        color: "green"
-    }
+	const blogStyle: {fontSize: string; color: string} = {
+		fontSize: "2em",
+		color: "green",
+	};
 
 	return (
 		<section>

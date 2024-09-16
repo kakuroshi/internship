@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import style from "./Style/HeroDetail.module.css"
+import {useSelector, useDispatch} from "react-redux";
+import {RootState, AppDispatch} from "../store";
+import { fetchHeroes } from '../thunk/winRateSlice';
 
 interface Hero {
   id: number;
@@ -28,29 +31,18 @@ interface Hero {
 
 const HeroDetails = () => {
   const { id } = useParams<{id: string}>();
-  const [hero, setHero] = useState<Hero | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [hero, setHero] = useState<Hero | undefined>(undefined);
+
+  const {items, loading, error} = useSelector((state: RootState) => state.heroes);
+	const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    const fetchHeroDetails = async () => {
-      try {
-        const response = await fetch('https://api.opendota.com/api/heroStats');
-        if (!response.ok) {
-          throw new Error('Ошибка сети');
-        }
-        const data: Hero[] = await response.json();
-        const selectedHero = data.find(hero => hero.id === parseInt(id || '0'));
-        setHero(selectedHero || null);
-      } catch (err) {
-        setError('Ошибка загрузки данных');
-      }
-    };
-
-    fetchHeroDetails();
-  }, [id]);
+    dispatch(fetchHeroes())
+    setHero(items.find(hero => hero.id === parseInt(id || '0')));
+  }, [dispatch]);
 
   if (error) return <p>{error}</p>;
-
+  if (loading) return <p>Loading...</p>
   if (!hero) return <p>Герой не найден</p>;
 
   return (
